@@ -1,5 +1,5 @@
-#define LONGINT_H
 #ifndef LONGINT_H
+#define LONGINT_H
 #include <string>
 #include <iostream>
 
@@ -7,7 +7,9 @@ using namespace std;
 
 class LongInt
 {
+
 private:
+
     int num[31];
     int size;
 
@@ -20,20 +22,12 @@ public:
     void Read(); // leitura
     void Print(); // imprimindo numero
     LongInt Sum(LongInt);
-    LongInt Sub(LongInt)    
+    LongInt Sub(LongInt);
 
     // Operadores de soma / subtracao
     LongInt operator + (const LongInt&);
     LongInt operator - (const LongInt&);
-    
-    // Operadores de compracao
-    string operator > (LongInt&);
-    string operator < (LongInt&);
-    string operator >= (LongInt&);
-    string operator <= (LongInt&);
-    string operator == (LongInt&);
-
-    bool Palindrome();
+  
 
     // Funcoes friend para a sobrecarga de operadores de entrada e de saida
     friend ostream& operator << (ostream& out, LongInt& n)
