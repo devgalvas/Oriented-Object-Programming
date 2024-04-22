@@ -157,3 +157,8 @@ LongInt LongInt::Sub(LongInt x)
 LongInt LongInt:: operator+(const LongInt &n) {return this-> Sum(n);}
 LongInt LongInt:: operator-(const LongInt &n) {return this->Sub(n);}
 
+    string LongInt::operator >(const LongInt&c) 
+    {
+        
+        
+    }

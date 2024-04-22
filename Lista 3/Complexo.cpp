@@ -63,3 +63,8 @@ float Complexo::PolarToRect()
 
     cout << "Forma polar: " << Zt << "|_ " << alpha << " ___ " << endl;
 }
+
+Complexo Complexo :: operator*(Complexo &c) {return this-> Mult(c);}
+Complexo Complexo :: operator+(Complexo &c) {return this-> Sum(c);}
+Complexo Complexo :: operator-(Complexo &c) {return this-> Sub(c);}
+Complexo Complexo :: operator/(Complexo &c) {return this-> Div(c);}

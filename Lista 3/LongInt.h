@@ -27,7 +27,15 @@ public:
     // Operadores de soma / subtracao
     LongInt operator + (const LongInt&);
     LongInt operator - (const LongInt&);
-  
+    
+    // Operadores de Comparação
+    string LongInt::operator >(const LongInt&);
+    string LongInt::operator >=(const LongInt&);
+    string LongInt::operator <(const LongInt&);
+    string LongInt::operator <=(const LongInt&);
+    string LongInt::operator ==(const LongInt&);
+    string LongInt::operator !=(const LongInt&);
+
 
     // Funcoes friend para a sobrecarga de operadores de entrada e de saida
     friend ostream& operator << (ostream& out, LongInt& n)
