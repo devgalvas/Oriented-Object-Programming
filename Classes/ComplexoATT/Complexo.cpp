@@ -69,74 +69,27 @@ Complexo Complexo :: operator+(Complexo &c) {return this-> Sum(c);}
 Complexo Complexo :: operator-(Complexo &c) {return this-> Sub(c);}
 Complexo Complexo :: operator/(Complexo &c) {return this-> Div(c);}
 
-string Complexo::operator<(Complexo &c)
-{   
-    if ((this->Mod() < c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
+Complexo& Complexo::operator++()
+{
+    real +=1 ;
+    imaginaria += 1;
+
+    return (*this);
 }
 
-string Complexo::operator>(Complexo &c)
-{   
-    if ((this->Mod() > c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
+Complexo Complexo::operator++(int n)
+{
+    Complexo temp;
+    temp = (*this);
+    real += 1;
+    imaginaria += 1;
+
+    return temp;
 }
 
-string Complexo::operator<=(Complexo &c)
-{   
-    if ((this->Mod() <= c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
-}
 
-string Complexo::operator>=(Complexo &c)
-{   
-    if ((this->Mod() >= c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
-}
 
-string Complexo::operator==(Complexo &c)
-{   
-    if ((this->Mod() == c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
-}
-
-string Complexo::operator!=(Complexo &c)
-{   
-    if ((this->Mod() != c.Mod()))
-    {
-        return "Sim";
-    }
-    else
-    {
-        return "Nao";
-    }
+Complexo::operator int()
+{
+    return (*this).Mod();
 }

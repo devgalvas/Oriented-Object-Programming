@@ -78,7 +78,7 @@ class CFracao
 
         //Sobrecarga de operadores de entrada e saída por funções friend:
         friend ostream& operator<<(ostream& out, CFracao& frac){
-            out << frac.m_numerador<< "/" << frac.m_denominador;
+            out << frac.m_numerador<<"/" << frac.m_denominador;
 
             return out;
         }

@@ -42,37 +42,15 @@ public:
     Complexo operator*(Complexo&);
     Complexo operator/(Complexo&);
 
+    Complexo& operator++();
+    Complexo operator++(int);
+
     double Mod();
     // Metodos de conversao
     float PolarToRect(void);
+    operator int();
 
     void PrintComplex(void);
-
-    // Sobrecarga de operadores de comparacao:
-    string operator<(Complexo&);
-    string operator>(Complexo&);
-    string operator<=(Complexo&);
-    string operator>=(Complexo&);
-    string operator==(Complexo&);
-    string operator!=(Complexo&);
-
-    friend ostream& operator <<(ostream& out, Complexo& c)
-    {   
-        out << c.real;
-        if(c.imaginaria < 0)
-            cout << " - " << -c.imaginaria << "i";
-        else
-            cout << " + " << c.imaginaria << "i";
-        
-        return out;
-    }
-
-    friend istream& operator>>(istream& in, Complexo& c)
-    {
-        in >> c.real >> c.imaginaria;
-        return in;
-    }
-
 };
 
 #endif
